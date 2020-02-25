@@ -446,6 +446,15 @@ class RobotCore:
         hit_wall = False
         adjust_x, adjust_y, bearing = 0, 0, 0
 
+        #: FIXME normally, "+|- 1e-10" wouldn't
+        #: be necessary to check if a robot
+        #: collides with a wall, but given the
+        #: precision in float operations and
+        #: the calculation of robot angles,
+        #: some robots get unwanted collisions
+        #: with walls when they try to run
+        #: perpendicular to the them
+        #: (e.g. the sample robot Walls).
         if self.x + 1e-10 < min_x:
             hit_wall = True
             adjust_x = min_x - self.x
