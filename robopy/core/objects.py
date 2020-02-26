@@ -453,7 +453,7 @@ class RobotCore:
         #: the calculation of robot angles,
         #: some robots get unwanted collisions
         #: with walls when they try to run
-        #: perpendicular to the them
+        #: perpendicular to them
         #: (e.g. the sample robot Walls).
         if self.x + 1e-10 < min_x:
             hit_wall = True
