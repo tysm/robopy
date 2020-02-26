@@ -8,7 +8,7 @@ Robopy is a translation of [Robocode](https://robocode.sourceforge.io) (Java to 
 
 ### Design
 
-Distinction between advanced robots and basic robots has not been implemented (e.g. classes or aiming aid);
+- Distinction between advanced robots and basic robots has not been implemented (e.g. classes or aiming aid).
 
 ### Geometry
 
@@ -16,7 +16,7 @@ Distinction between advanced robots and basic robots has not been implemented (e
 
 ### Rendering
 
-- There's no UI, opencv has being used to render battle samples during development.
+- There's no UI, opencv has been used to render battle samples during development.
 
 ### Score
 
