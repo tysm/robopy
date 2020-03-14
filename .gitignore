@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/venv,python,pycharm
-# Edit at https://www.gitignore.io/?templates=venv,python,pycharm
+# Created by https://www.gitignore.io/api/venv,python,pycharm,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=venv,python,pycharm,visualstudiocode
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
@@ -22,6 +22,9 @@
 # CMake
 cmake-build-*/
 
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
 # File-based project format
 *.iws
 
@@ -34,11 +37,20 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+# Cursive Clojure plugin
+.idea/replstate.xml
+
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### PyCharm Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
@@ -47,6 +59,16 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+
+# Sonarlint plugin
+.idea/**/sonarlint/
+
+# SonarQube Plugin
+.idea/**/sonarIssues.xml
+
+# Markdown Navigator plugin
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -159,6 +181,7 @@ dmypy.json
 pyvenv.cfg
 .env
 .venv
+.venv-*
 env/
 venv/
 ENV/
@@ -166,4 +189,11 @@ env.bak/
 venv.bak/
 pip-selfcheck.json
 
-# End of https://www.gitignore.io/api/venv,python,pycharm
+### VisualStudioCode ###
+.vscode/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.gitignore.io/api/venv,python,pycharm,visualstudiocode

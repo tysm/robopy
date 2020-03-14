@@ -1,5 +1,4 @@
 import enum
-from threading import Semaphore
 
 
 @enum.unique

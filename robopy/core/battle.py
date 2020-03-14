@@ -1,13 +1,13 @@
-import time
 import random
+import time
 from threading import Thread, Semaphore
 from typing import Dict, List, Tuple, Type
 
 from robopy.api.robot import Robot
-from robopy.wrapper.robot import RobotWrapper
-from robopy.core.objects import BattlefieldCore, BulletCore, RobotCore
-from robopy.core.execution import Statistics, BattleState
 from robopy.core.events import EventKind
+from robopy.core.execution import Statistics, BattleState
+from robopy.core.objects import BattlefieldCore, BulletCore, RobotCore
+from robopy.wrapper.robot import RobotWrapper
 
 
 class Battle(Thread):

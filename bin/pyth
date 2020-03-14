@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCRIPT_PATH="${BASH_SOURCE[0]#./}"
+
+if [[ ! ${0#./} != $SCRIPT_PATH ]]; then
+  echo "You cannot run it directly. This file must be sourced *from bash*: source $SCRIPT_PATH PYTHON"
+  exit 1
+fi
+
+PROJECT_PATH="$(cd "$(dirname "$SCRIPT_PATH")"/.. && pwd)"
+if [[ -z $PYTHONPATH ]]; then
+  export PYTHONPATH="$PROJECT_PATH"
+elif [[ ! $PYTHONPATH =~ (^|:)$PROJECT_PATH(:|$) ]]; then
+  export PYTHONPATH="$PYTHONPATH:$PROJECT_PATH"
+fi

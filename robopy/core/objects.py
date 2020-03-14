@@ -8,11 +8,11 @@ import numpy as np
 import shapely.geometry as geometry
 
 import robopy.core.rules as rules
+from robopy.core.events import EventCore, EventKind
+from robopy.core.execution import Statistics, Command, BattleState, BulletState, RobotState, InterruptedExecutionException
 from robopy.utils import normalization
 from robopy.utils.math import sign
 from robopy.utils.threading import List as ThreadingList
-from robopy.core.events import EventCore, EventKind
-from robopy.core.execution import Statistics, Command, BattleState, BulletState, RobotState, InterruptedExecutionException
 
 
 class BattlefieldCore:

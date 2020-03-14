@@ -1,0 +1,32 @@
+#!/bin/bash
+
+SCRIPT_PATH="${BASH_SOURCE[0]#./}"
+
+if [[ ! ${0#./} != $SCRIPT_PATH ]]; then
+  echo "You cannot run it directly. This file must be sourced *from bash*: source $SCRIPT_PATH PYTHON"
+  exit 1
+fi
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $SCRIPT_PATH PYTHON"
+  return 1
+else
+  VENVDIR=".venv-$1"
+  if [[ ! -d $VENVDIR ]]; then
+    # creates the virtual environment.
+    # PYTHON -m venv .venv-PYTHON
+    if ! (
+      $1 -m venv "$VENVDIR" && \
+      source "$VENVDIR/bin/activate" && \
+      pip install -U pip setuptools && \
+      pip install --no-cache-dir -r requeriments.txt
+    ); then
+      # removes the created venv.
+      rm -rf "$VENVDIR"
+      return 1
+    fi
+  fi
+  # sources the venv previously created.
+  source "$VENVDIR/bin/activate"
+  source "$(dirname "$SCRIPT_PATH")/pyth"
+fi

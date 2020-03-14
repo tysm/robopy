@@ -1,7 +1,7 @@
 from typing import List
 
-from robopy.api.objects import Bullet
 from robopy.api.events import *  #: TODO name imports.
+from robopy.api.objects import Bullet
 from robopy.core.events import EventCore, EventKind
 from robopy.core.objects import BulletCore
 from robopy.utils.threading import List as ThreadingList

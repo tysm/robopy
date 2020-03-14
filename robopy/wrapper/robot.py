@@ -3,8 +3,8 @@ from typing import Callable
 
 import robopy.core.rules as rules
 from robopy.api.objects import Battlefield
-from robopy.core.objects import RobotCore
 from robopy.core.execution import Statistics, Command
+from robopy.core.objects import RobotCore
 from robopy.wrapper.events import EventManager
 from robopy.wrapper.execution import Statistics
 
