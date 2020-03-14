@@ -19,7 +19,7 @@ else
       $1 -m venv "$VENVDIR" && \
       source "$VENVDIR/bin/activate" && \
       pip install -U pip setuptools && \
-      pip install --no-cache-dir -r requeriments.txt
+      pip install --no-cache-dir -r requirements.txt
     ); then
       # removes the created venv.
       rm -rf "$VENVDIR"
