@@ -180,7 +180,6 @@ class Battle(Thread):
             for robot in self.shuffled_robots:
                 if robot.dead or robot in robots:
                     continue
-                print("SOMEONE JUST SKIPPED", self.statistics.time, self.statistics.time - 1, robot.name)
                 robot.add_event(EventKind.SkippedTurn, (self.statistics.time - 1,))
 
             #: Publish Status event with updated information.
